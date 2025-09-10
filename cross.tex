@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=1.5]
+\draw[line width=4mm, draw=gold] (0,-3.5) -- (0,1.5);
+\draw[line width=4mm, draw=gold] (-1.5,0) -- (1.5,0);
+\def\edge{
+(.5,.5) -- ++ (0,1.05) to [out=0,in=-90] ++ (.5,.5) to [out=90,in=0] ++ (-.5,.5) to [out=90,in=0] ++ (-.5,.5) to [out=180,in=90] ++ (-.5,-.5) to [out=-180,in=90] ++ (-.5,-.5)  to [out=-90,in=180] ++ (.5,-.5) -- ++ (0,-1.05)}
+\def\longedge{
+(.5,.5) -- ++ (0,3) to [out=0,in=-90] ++ (.5,.5) to [out=90,in=0] ++ (-.5,.5) to [out=90,in=0] ++ (-.5,.5) to [out=180,in=90] ++ (-.5,-.5) to [out=-180,in=90] ++ (-.5,-.5)  to [out=-90,in=180] ++ (.5,-.5) -- ++ (0,-3)}
+\draw[line width=.2cm, draw=gold, opacity=.6, line join=round, line cap=round] (.5,.5) {[rotate=0] -- \edge}{[rotate=90] -- \edge}{[rotate=180] -- \longedge}{[rotate=270] -- \edge}--cycle;
+\end{tikzpicture}
